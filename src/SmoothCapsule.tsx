@@ -1,4 +1,5 @@
 import type { CSSProperties, ReactNode } from "react";
+import "./smooth-capsule.css";
 
 const CAP_VIEW_BOX_WIDTH = 18;
 const CAP_VIEW_BOX_HEIGHT = 22;

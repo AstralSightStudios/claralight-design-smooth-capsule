@@ -16,8 +16,8 @@ React component for rendering a smooth, glass-like capsule mask with configurabl
 - 通过胶囊高度控制尺寸，并保持端帽比例。
 - Optional inset highlight for stronger depth.
 - 可选内侧高光，用于增强层次感。
-- Ships TypeScript types and a standalone CSS entry.
-- 提供 TypeScript 类型和独立 CSS 入口。
+- Ships TypeScript types and auto-loaded component styles.
+- 提供 TypeScript 类型，并自动加载组件样式。
 
 ## Installation / 安装
 
@@ -35,13 +35,12 @@ React 18 or later is required.
 
 ## Usage / 使用
 
-Import the component and its stylesheet once in your application.
+Import the component directly in your application.
 
-在应用中导入组件，并全局导入一次样式文件。
+在应用中直接导入组件即可使用。
 
 ```tsx
 import { SmoothCapsule } from "@claralight-design/smooth-capsule";
-import "@claralight-design/smooth-capsule/smooth-capsule.css";
 
 export function Example() {
   return (
@@ -58,7 +57,6 @@ With custom size and visual settings:
 
 ```tsx
 import { SmoothCapsule } from "@claralight-design/smooth-capsule";
-import "@claralight-design/smooth-capsule/smooth-capsule.css";
 
 export function CustomCapsule() {
   return (
@@ -88,9 +86,9 @@ export function CustomCapsule() {
 
 ## Styling Notes / 样式说明
 
-The root element is an inline-flex `<span>`. The component defines CSS custom properties internally from props, then applies mask, blur, tint, and optional highlight through `smooth-capsule.css`.
+The root element is an inline-flex `<span>`. The component defines CSS custom properties internally from props, then applies mask, blur, tint, and optional highlight through its bundled stylesheet.
 
-根元素是一个 `inline-flex` 的 `<span>`。组件会根据属性生成 CSS 自定义属性，并通过 `smooth-capsule.css` 应用遮罩、模糊、色调和可选高光。
+根元素是一个 `inline-flex` 的 `<span>`。组件会根据属性生成 CSS 自定义属性，并通过内置样式应用遮罩、模糊、色调和可选高光。
 
 Child content controls the visible middle width. Set width, padding, or layout styles on the child element when you need a specific capsule length.
 
@@ -127,10 +125,6 @@ pnpm build
 ```ts
 export { SmoothCapsule } from "@claralight-design/smooth-capsule";
 export type { SmoothCapsuleProps } from "@claralight-design/smooth-capsule";
-```
-
-```ts
-import "@claralight-design/smooth-capsule/smooth-capsule.css";
 ```
 
 ## Browser Support / 浏览器支持

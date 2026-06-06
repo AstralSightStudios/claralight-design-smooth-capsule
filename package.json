@@ -1,6 +1,6 @@
 {
   "name": "@claralight-design/smooth-capsule",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A React smooth capsule glass mask component.",
   "type": "module",
   "main": "./dist/index.js",

@@ -1,5 +1,5 @@
 import { SmoothCapsule } from "@claralight-design/smooth-capsule";
-import "@claralight-design/smooth-capsule/smooth-capsule.css";
+import React from "react";
 
 export function Example() {
   return (
