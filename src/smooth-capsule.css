@@ -1,0 +1,45 @@
+.smooth-capsule {
+  --smooth-capsule-middle-width: calc(
+    100% - var(--smooth-capsule-cap-width) * 2 +
+      var(--smooth-capsule-cap-overlap) * 2
+  );
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: var(--smooth-capsule-cap-height);
+  vertical-align: middle;
+  isolation: isolate;
+  background: var(--smooth-capsule-tint);
+  -webkit-backdrop-filter: blur(var(--smooth-capsule-blur));
+  backdrop-filter: blur(var(--smooth-capsule-blur));
+  -webkit-mask-image: var(--smooth-capsule-left-mask),
+    linear-gradient(#000 0 0), var(--smooth-capsule-right-mask);
+  mask-image: var(--smooth-capsule-left-mask), linear-gradient(#000 0 0),
+    var(--smooth-capsule-right-mask);
+  -webkit-mask-size: var(--smooth-capsule-cap-width)
+      var(--smooth-capsule-cap-height),
+    var(--smooth-capsule-middle-width) var(--smooth-capsule-cap-height),
+    var(--smooth-capsule-cap-width) var(--smooth-capsule-cap-height);
+  mask-size: var(--smooth-capsule-cap-width)
+      var(--smooth-capsule-cap-height),
+    var(--smooth-capsule-middle-width) var(--smooth-capsule-cap-height),
+    var(--smooth-capsule-cap-width) var(--smooth-capsule-cap-height);
+  -webkit-mask-position: left center,
+    calc(var(--smooth-capsule-cap-width) - var(--smooth-capsule-cap-overlap))
+      center,
+    right center;
+  mask-position: left center,
+    calc(var(--smooth-capsule-cap-width) - var(--smooth-capsule-cap-overlap))
+      center,
+    right center;
+  -webkit-mask-repeat: no-repeat, no-repeat, no-repeat;
+  mask-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+.smooth-capsule__content {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+}
