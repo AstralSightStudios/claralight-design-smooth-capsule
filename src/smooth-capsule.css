@@ -37,6 +37,29 @@
   mask-repeat: no-repeat, no-repeat, no-repeat;
 }
 
+.smooth-capsule::before,
+.smooth-capsule::after {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: var(--smooth-capsule-highlight-width);
+  height: var(--smooth-capsule-highlight-height);
+  content: "";
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.smooth-capsule::before {
+  left: 0;
+  background-image: var(--smooth-capsule-left-highlight);
+}
+
+.smooth-capsule::after {
+  right: 0;
+  background-image: var(--smooth-capsule-right-highlight);
+}
+
 .smooth-capsule__content {
   position: relative;
   z-index: 1;

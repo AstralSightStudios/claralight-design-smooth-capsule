@@ -6,6 +6,7 @@ export function Demo() {
   const [height, setHeight] = useState(44);
   const [blur, setBlur] = useState(24);
   const [blurEnabled, setBlurEnabled] = useState(true);
+  const [highlightEnabled, setHighlightEnabled] = useState(false);
   const [backgroundImage, setBackgroundImage] = useState<string>();
 
   useEffect(() => {
@@ -46,6 +47,7 @@ export function Demo() {
           capHeight={height}
           blur={blurEnabled ? blur : 0}
           tint="rgb(255 255 255 / 0.18)"
+          highlight={highlightEnabled}
         >
           <span
             className="demo-capsule-content"
@@ -100,6 +102,17 @@ export function Demo() {
             onChange={(event) => setBlurEnabled(event.currentTarget.checked)}
           />
           <span>启用模糊</span>
+        </label>
+
+        <label className="demo-switch">
+          <input
+            type="checkbox"
+            checked={highlightEnabled}
+            onChange={(event) =>
+              setHighlightEnabled(event.currentTarget.checked)
+            }
+          />
+          <span>显示高光</span>
         </label>
 
         <label className="demo-file">
