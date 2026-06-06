@@ -1,6 +1,6 @@
 # @claralight-design/smooth-capsule
 
-![Smooth Capsule preview](./assets/preview.png)
+![Smooth Capsule preview](https://github.com/user-attachments/assets/9e1f95dc-1173-4b7f-ac6f-7e39d26d86ca)
 
 React component for rendering a smooth, glass-like capsule mask with configurable blur, tint, size, and highlight.
 
